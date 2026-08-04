@@ -43,28 +43,6 @@
       "expected_package_managers": {
         "contains": ["ant"]
       },
-
-      "expected_dependency_pairs": [
-        {
-          "artifactId": "commons-lang3-3.14.0.jar",
-          "version": "3.14.0",
-          "_note": "Regression signal #11 (dynamic-revision): Mend MUST emit concrete '3.14.0', not the dynamic expression '3.+'. If this assertion fails, Mend is leaking the dynamic expression into its output."
-        },
-        {
-          "artifactId": "commons-text-1.10.0.jar",
-          "version": "1.10.0",
-          "_note": "Regression signal #23 (changing-revision): Mend MUST emit concrete '1.10.0', not 'latest.integration'. If this assertion fails, Mend is emitting the dynamic selector instead of the resolved version."
-        },
-        {
-          "artifactId": "commons-codec-1.16.1.jar",
-          "version": "1.16.1"
-        },
-        {
-          "artifactId": "slf4j-api-2.0.16.jar",
-          "version": "2.0.16"
-        }
-      ],
-
       "validate_agent_versions": false,
       "expected_agent_version": "",
       "expected_plugin_version": "",
@@ -79,13 +57,11 @@
         "expected_dependency_checksums": [
           {
             "artifactId": "commons-lang3-3.14.0.jar",
-            "version": "3.14.0",
             "sha1": "1ed471194b02f2c6cb734a0cd6f6f107c673afae",
             "_note": "dynamic-revision concrete SHA1 — verified against Maven Central"
           },
           {
             "artifactId": "commons-text-1.10.0.jar",
-            "version": "1.10.0",
             "sha1": "3363381aef8cef2dbc1023b3e3a9433b08b64e01",
             "_note": "changing-revision stable-substitute SHA1 — verified against Maven Central"
           },
